@@ -34,7 +34,7 @@ As I continue learning, I plan to:
 ## Acknowledgments
 - YouTube tutorials that helped me learn
 - Stack Overflow community
-- AI tools that assisted in problem-solving
+- AI tools that assisted me in debugging but failed
 
 
 Feel free to reach out if you have any suggestions!
