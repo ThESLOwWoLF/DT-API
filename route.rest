@@ -1,0 +1,48 @@
+GET http://localhost:3000/test
+###
+
+GET http://localhost:3000/test/15
+### Test 1: Get event by ID
+GET http://localhost:3000/api/v3/app/events?id=12345678
+Content-Type: application/json
+
+### Test 2: Get latest events with pagination
+GET http://localhost:3000/api/v3/app/events?type=latest&limit=5&page=1
+Content-Type: application/json
+
+### Test 3: Create new event
+POST http://localhost:3000/api/v3/app/events
+Content-Type: application/json
+{
+    "name": "this is name",
+    "files": ["test1.jpg", "test2.pdf"],
+    "tagline": "this is tagline",
+    "schedule": "2024-12-28T09:00:00.000Z",
+    "description": "this is description",
+    "moderator": "mode name here",
+    "category": "category stuff here",
+    "sub_category": "sub category here",
+    "rigor_rank": 4
+}
+
+### Test 4: Update existing event
+PUT http://localhost:3000/api/v3/app/events/12345678
+Content-Type: application/json
+
+{
+    "name": "Updated name",
+    "files": ["new-test.jpg", "new-test2.pdf"],
+    "tagline": "New Tagline",
+    "schedule": "2024-12-29T11:11:11.000Z",
+    "description": "Updated desc",
+    "moderator": "new mod name",
+    "category": "new tech",
+    "sub_category": "new sub",
+    "rigor_rank": 5
+}
+
+### Test 5: Delete event
+DELETE http://localhost:3000/api/v3/app/events/12345678
+Content-Type: application/json
+
+
